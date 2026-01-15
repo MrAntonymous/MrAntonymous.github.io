@@ -1,12 +1,413 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My GitHub Page</title>
-  </head>
-  <body style="font-family: system-ui; padding: 40px;">
-    <h1>It works 🎉</h1>
-    <p>This page is hosted with GitHub Pages.</p>
-  </body>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Finca Rústica en Venta | [Nombre de la finca] — [Zona/Provincia]</title>
+  <meta name="description" content="Finca rústica de [XX] ha en [Zona], con [agua/pozo], [vivienda], accesos cómodos y gran potencial para [uso]. Solicita dossier y visita." />
+  <link rel="stylesheet" href="styles.css" />
+  <meta property="og:title" content="Finca rústica en venta | [Nombre de la finca]" />
+  <meta property="og:description" content=" [XX] ha en [Zona]. Agua, vivienda, accesos y potencial. Solicita dossier y visita." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/hero.jpg" />
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio">[Nombre de la finca]</a>
+    <nav class="nav">
+      <a href="#galeria">Galería</a>
+      <a href="#ficha">Ficha</a>
+      <a href="#infraestructura">Infraestructura</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a class="btn btn-small" href="#contacto">Contactar</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <!-- HERO -->
+    <section class="hero" style="--hero:url('assets/img/hero.jpg')">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <p class="badge">Finca rústica en venta · [Provincia]</p>
+          <h1>[Nombre de la finca]: [Frase corta que la define]</h1>
+          <p class="sub">
+            [XX] hectáreas · [Secano/Regadío/Mixta] · [Agua: pozo/manantial/derechos] ·
+            [Vivienda: sí/no] · Acceso por [camino asfaltado/pista en buen estado]
+          </p>
+
+          <div class="hero-kpis">
+            <div class="kpi"><span class="kpi-big">[XX]</span><span class="kpi-label">hectáreas</span></div>
+            <div class="kpi"><span class="kpi-big">[X]</span><span class="kpi-label">min al pueblo</span></div>
+            <div class="kpi"><span class="kpi-big">[€]</span><span class="kpi-label">precio</span></div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn" href="#contacto">Solicitar dossier</a>
+            <a class="btn btn-ghost" href="#galeria">Ver fotos</a>
+          </div>
+
+          <p class="note">
+            *Información orientativa. Detalles y documentación bajo solicitud. Sujeta a comprobación.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUMEN -->
+    <section class="section">
+      <div class="container grid-2">
+        <div>
+          <h2>Una finca para vivirla y explotarla</h2>
+          <p>
+            Situada en <strong>[Zona/Municipio]</strong>, esta finca combina <strong>[paisaje/privacidad/vistas]</strong>
+            con recursos clave: <strong>[agua]</strong>, <strong>[accesos]</strong> y <strong>[infraestructura]</strong>.
+            Ideal para <strong>[olivar/viñedo/ganadería/ecoturismo/caballos/recreo]</strong>.
+          </p>
+
+          <ul class="ticks">
+            <li><strong>Agua:</strong> [pozo legalizado / sondeo / manantial / derechos]</li>
+            <li><strong>Energía:</strong> [red / solar / grupo]</li>
+            <li><strong>Edificaciones:</strong> [casa / nave / almacén / cuadras] de aprox. [m²]</li>
+            <li><strong>Accesos:</strong> [asfalto hasta la entrada / pista en buen estado]</li>
+          </ul>
+        </div>
+
+        <aside class="card">
+          <h3>Ficha rápida</h3>
+          <dl class="specs">
+            <div><dt>Superficie</dt><dd>[XX] ha ([XXXX] m²)</dd></div>
+            <div><dt>Uso</dt><dd>[agrícola/ganadero/mixto/recreo]</dd></div>
+            <div><dt>Agua</dt><dd>[pozo / derechos / depósito]</dd></div>
+            <div><dt>Luz</dt><dd>[red / solar / no]</dd></div>
+            <div><dt>Vivienda</dt><dd>[sí/no] · [estado]</dd></div>
+            <div><dt>Altitud</dt><dd>[XXX] m</dd></div>
+            <div><dt>Acceso</dt><dd>[asfalto/pista] · [x km]</dd></div>
+            <div><dt>Precio</dt><dd>[€] (negociable)</dd></div>
+          </dl>
+
+          <div class="card-actions">
+            <a class="btn btn-full" href="#contacto">Concertar visita</a>
+            <a class="btn btn-ghost btn-full" href="assets/docs/dossier.pdf" target="_blank" rel="noopener">
+              Descargar dossier (PDF)
+            </a>
+          </div>
+
+          <p class="small">
+            Si no tienes dossier aún, deja el enlace y más tarde subes el PDF a <code>assets/docs/</code>.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="galeria" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Galería</h2>
+          <p>Fotos clave: accesos, vistas, vivienda, agua, linderos y zonas de aprovechamiento.</p>
+        </div>
+
+        <div class="gallery" id="gallery">
+          <!-- Cambia las rutas a tus fotos reales -->
+          <button class="thumb" data-full="assets/img/foto1.jpg" aria-label="Abrir foto 1">
+            <img src="assets/img/foto1.jpg" alt="Vista panorámica de la finca" loading="lazy">
+          </button>
+          <button class="thumb" data-full="assets/img/foto2.jpg" aria-label="Abrir foto 2">
+            <img src="assets/img/foto2.jpg" alt="Camino de acceso en buen estado" loading="lazy">
+          </button>
+          <button class="thumb" data-full="assets/img/foto3.jpg" aria-label="Abrir foto 3">
+            <img src="assets/img/foto3.jpg" alt="Zona de vivienda o cortijo" loading="lazy">
+          </button>
+          <button class="thumb" data-full="assets/img/foto4.jpg" aria-label="Abrir foto 4">
+            <img src="assets/img/foto4.jpg" alt="Punto de agua / depósito" loading="lazy">
+          </button>
+          <button class="thumb" data-full="assets/img/foto5.jpg" aria-label="Abrir foto 5">
+            <img src="assets/img/foto5.jpg" alt="Parcela con cultivo / monte" loading="lazy">
+          </button>
+          <button class="thumb" data-full="assets/img/foto6.jpg" aria-label="Abrir foto 6">
+            <img src="assets/img/foto6.jpg" alt="Nave o instalaciones" loading="lazy">
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FICHA DETALLADA -->
+    <section id="ficha" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Descripción detallada</h2>
+          <p>Información clara para evaluar la finca: terreno, producción, servicios y posibilidades.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Terreno y aprovechamiento</h3>
+            <p>
+              La finca se compone de <strong>[XX]</strong> ha, con predominio de
+              <strong>[llano/ondulado/montañoso]</strong> y orientación <strong>[sur/este]</strong>.
+              Suelos <strong>[francos/arcillosos/calizos]</strong> adecuados para <strong>[cultivo]</strong>.
+            </p>
+            <ul class="bullets">
+              <li><strong>Uso actual:</strong> [olivar/monte/pastos/almendro/viña]</li>
+              <li><strong>Potencial:</strong> [replantación, regadío, agroturismo, caza, caballos]</li>
+              <li><strong>Privacidad:</strong> [alta/media] · <strong>Vistas:</strong> [sí/no]</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Edificaciones</h3>
+            <p>
+              Incluye <strong>[cortijo/casa]</strong> de aprox. <strong>[m²]</strong>,
+              más <strong>[nave/almacén/cuadras]</strong>. Estado: <strong>[habitable/para reformar]</strong>.
+            </p>
+            <ul class="bullets">
+              <li><strong>Distribución:</strong> [X] dormitorios, [X] baños, salón, cocina</li>
+              <li><strong>Elementos:</strong> [chimenea, porche, horno, piscina, aljibe]</li>
+              <li><strong>Licencias:</strong> [si/no/pendiente de verificar]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFRAESTRUCTURA -->
+    <section id="infraestructura" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Infraestructura y recursos</h2>
+          <p>Lo que más impacta en valor real: agua, accesos, energía y logística.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Agua</h3>
+            <p><strong>[Pozo/sondeo/manantial]</strong> con [caudal estimado] y <strong>[depósito]</strong> de [litros].</p>
+            <ul class="bullets">
+              <li><strong>Derechos:</strong> [sí/no]</li>
+              <li><strong>Riego:</strong> [goteo/aspersión/no]</li>
+              <li><strong>Puntos:</strong> [X] puntos de agua</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Energía y comunicaciones</h3>
+            <p>[Red eléctrica / kit solar con baterías / posibilidad de conexión].</p>
+            <ul class="bullets">
+              <li><strong>Internet:</strong> [4G/5G/fibra/satelital]</li>
+              <li><strong>Cobertura:</strong> [buena/media]</li>
+              <li><strong>Iluminación:</strong> [sí/no]</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Accesos y logística</h3>
+            <p>Acceso por <strong>[camino]</strong> a [X] km de <strong>[pueblo]</strong>.</p>
+            <ul class="bullets">
+              <li><strong>Distancias:</strong> autovía [X] min · estación [X] min</li>
+              <li><strong>Entrada:</strong> [portón / servidumbre]</li>
+              <li><strong>Caminos internos:</strong> [sí/no] · [km]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UBICACIÓN -->
+    <section id="ubicacion" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Ubicación</h2>
+          <p>Mejor no poner coordenadas exactas en abierto: mostramos zona y accesos.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Entorno</h3>
+            <p>
+              A [X] minutos de <strong>[pueblo]</strong> (servicios), y [X] minutos de <strong>[ciudad]</strong>.
+              Entorno de <strong>[dehesa/olivar/monte mediterráneo]</strong> con
+              <strong>[rutas, caza, vistas]</strong>.
+            </p>
+            <ul class="bullets">
+              <li><strong>Servicios:</strong> supermercado, médico, gasolinera en [X] min</li>
+              <li><strong>Aeropuerto:</strong> [X] min</li>
+              <li><strong>Acceso:</strong> [asfalto hasta… / pista de…]</li>
+            </ul>
+          </div>
+
+          <div class="map card">
+            <!-- Reemplaza el src por un embed de Google Maps (zona aproximada) -->
+            <iframe
+              title="Mapa aproximado"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-3.75%2C40.36%2C-3.65%2C40.42&layer=mapnik">
+            </iframe>
+            <p class="small">Mapa aproximado (ejemplo). Puedes usar OpenStreetMap o Google Maps con ubicación general.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOCUMENTACIÓN -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Documentación y aspectos legales</h2>
+          <p>Transparencia sin prometer: lo importante es lo verificable.</p>
+        </div>
+
+        <div class="card">
+          <ul class="ticks">
+            <li><strong>Catastro:</strong> [referencia / disponible bajo solicitud]</li>
+            <li><strong>Registro:</strong> [situación registral a confirmar / libre de cargas / etc.]</li>
+            <li><strong>Servidumbres:</strong> [sí/no] (detalle bajo solicitud)</li>
+            <li><strong>Planeamiento:</strong> [suelo rústico / protección / usos] (verificación municipal)</li>
+          </ul>
+          <p class="small">
+            Recomendación: aportar nota simple, recibos IBI, info de agua/derechos y certificado energético si aplica.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section">
+      <div class="container grid-2">
+        <div>
+          <h2>Solicita dossier y visita</h2>
+          <p>
+            Déjame tus datos y te envío <strong>dossier PDF</strong>, vídeo si existe, y
+            coordinamos una visita. Si prefieres, contacta por WhatsApp o llamada.
+          </p>
+
+          <div class="contact-cards">
+            <a class="contact-card" href="tel:+34XXXXXXXXX">
+              <span class="cc-title">Teléfono</span>
+              <span class="cc-value">+34 XXX XXX XXX</span>
+            </a>
+            <a class="contact-card" href="https://wa.me/34XXXXXXXXX" target="_blank" rel="noopener">
+              <span class="cc-title">WhatsApp</span>
+              <span class="cc-value">Escribir ahora</span>
+            </a>
+            <a class="contact-card" href="mailto:contacto@tudominio.com?subject=Solicitud%20de%20dossier%20-%20[Nombre%20de%20la%20finca]">
+              <span class="cc-title">Email</span>
+              <span class="cc-value">contacto@tudominio.com</span>
+            </a>
+          </div>
+
+          <p class="small">
+            *Si no tienes dominio/email, puedes usar tu correo personal en el <code>mailto:</code>.
+          </p>
+        </div>
+
+        <form class="card form" id="leadForm">
+          <h3>Formulario</h3>
+
+          <label>
+            Nombre
+            <input name="nombre" required placeholder="Tu nombre" />
+          </label>
+
+          <label>
+            Email
+            <input type="email" name="email" required placeholder="tu@email.com" />
+          </label>
+
+          <label>
+            Teléfono (opcional)
+            <input name="telefono" placeholder="+34..." />
+          </label>
+
+          <label>
+            Mensaje
+            <textarea name="mensaje" rows="4" placeholder="Qué te interesa (uso, plazos, visita...)"></textarea>
+          </label>
+
+          <label class="check">
+            <input type="checkbox" required />
+            <span>Acepto ser contactado para recibir información sobre la finca.</span>
+          </label>
+
+          <button class="btn btn-full" type="submit">Enviar solicitud</button>
+          <p class="small" id="formHint">
+            Este formulario usa tu email (mailto) para enviar el mensaje. Si quieres un formulario “real”
+            (que guarde leads), te indico cómo conectarlo con Formspree/Netlify.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Preguntas frecuentes</h2>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>¿Se puede construir o ampliar?</summary>
+            <p>Depende del planeamiento municipal y de la situación de las edificaciones existentes. Se recomienda verificación urbanística previa.</p>
+          </details>
+
+          <details>
+            <summary>¿El agua está legalizada?</summary>
+            <p>Indicar aquí el estado real (pozo/sondeo/derechos). Si no está confirmado, decir “pendiente de verificar”.</p>
+          </details>
+
+          <details>
+            <summary>¿Cómo es el acceso en invierno?</summary>
+            <p>Describe si es apto turismo, coche normal o requiere 4x4, y si el camino es público/privado.</p>
+          </details>
+
+          <details>
+            <summary>¿Qué gastos e impuestos hay?</summary>
+            <p>IBI, posibles cuotas de comunidad de regantes, y los impuestos de transmisión (según comunidad autónoma).</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> [Nombre de la finca].</p>
+      <p class="small">Web informativa. Datos sujetos a verificación. Fotografías orientativas.</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <dialog class="lightbox" id="lightbox">
+    <button class="lb-close" id="lbClose" aria-label="Cerrar">×</button>
+    <img id="lbImg" alt="" />
+  </dialog>
+
+  <!-- Datos estructurados (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateListing",
+    "name": "[Nombre de la finca]",
+    "description": "Finca rústica de [XX] ha en [Zona], con [agua], [vivienda] y potencial para [uso].",
+    "url": "https://TU-USUARIO.github.io/TU-REPO/",
+    "image": ["assets/img/hero.jpg"],
+    "offers": {
+      "@type": "Offer",
+      "price": "[PRECIO]",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "[Provincia]",
+      "addressCountry": "ES"
+    }
+  }
+  </script>
+
+  <script src="script.js"></script>
+</body>
 </html>
